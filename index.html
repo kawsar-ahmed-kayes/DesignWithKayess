@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    :root {
+      --gradient-bg: linear-gradient(135deg, #1e1b2e, #3d2c8d);
+      --card-bg: rgba(255, 255, 255, 0.06);
+      --text-color: #f3f3f3;
+      --accent: #a970ff;
+      --blur: blur(15px);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background: var(--gradient-bg);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      overflow-x: hidden;
+      cursor: url('https://cdn.custom-cursor.com/db/12345/32/arrow.png'), auto;
+    }
+
+    header {
+      background: rgba(30, 27, 46, 0.7);
+      backdrop-filter: var(--blur);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: var(--accent);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #ccc;
+    }
+
+    .services, .portfolio, .about, .contact {
+      margin-top: 60px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: var(--blur);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background: linear-gradient(135deg, #a970ff, #8c52ff);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(169,112,255,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: rgba(30, 27, 46, 0.5);
+      color: #bbb;
+      margin-top: 60px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+    <h2>Hi, I'm Kayess. Creative Designer & Developer</h2>
+    <p>I craft beautiful designs and digital solutions</p>
+  </section>
+
+  <section class="services" id="services">
+    <h2 data-aos="fade-right">Services</h2>
+    <div class="grid">
+      <a href="graphics.html" class="card" data-aos="fade-up" data-aos-delay="100">Graphics Design</a>
+      <a href="uidesign.html" class="card" data-aos="fade-up" data-aos-delay="100">UI Design</a>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">Video Editing</div>
+      <div class="card" data-aos="fade-up" data-aos-delay="400">App Development</div>
+      <div class="card" data-aos="fade-up" data-aos-delay="500">Website Design</div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <h2 data-aos="fade-right">My Work</h2>
+    <div class="grid">
+      <div class="card" data-aos="zoom-in">Project 1</div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">Project 2</div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">Project 3</div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 data-aos="fade-right">About Me</h2>
+    <p data-aos="fade-left">I am a multi-skilled creative professional passionate about design and technology. I bring ideas to life through visual storytelling and functional design.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 data-aos="fade-right">Contact</h2>
+    <p data-aos="fade-up">Email: kawsarahmedkayes07@email.com</p>
+    <div class="social-links" data-aos="fade-up" data-aos-delay="100">
+      <a href="https://www.facebook.com/kayessssofficial" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/_kayess_everywhere?igsh=N2MyYWJ0N2t6Y2Zq" target="_blank">Instagram</a>
+    </div>
+    <a href="#" class="cta-button" data-aos="zoom-in">Get in Touch</a>
+  </section>
+
+  <footer data-aos="fade-up">
+    &copy; 2025 Kayess. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+  </script>
+</body>
+</html>

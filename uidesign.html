@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UI Design - Kayess Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  
+  <style>
+    :root {
+      --gradient-bg: linear-gradient(135deg, #1e1b2e, #3d2c8d);
+      --card-bg: rgba(255, 255, 255, 0.06);
+      --text-color: #f3f3f3;
+      --accent: #a970ff;
+      --blur: blur(15px);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background: var(--gradient-bg);
+      color: var(--text-color);
+      padding: 40px;
+      cursor: url('https://cdn.custom-cursor.com/db/12345/32/arrow.png'), auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--accent);
+      font-size: 36px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #bbb;
+    }
+
+    .back-button {
+      background-color: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 40px;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #8c52ff;
+      transform: scale(1.1);
+    }
+
+    .section-wrapper {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      margin-top: 20px;
+      margin-bottom: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #a970ff, #6f61ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .thumbnail img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Back Button -->
+  <a href="index.html" class="back-button">Back to Main Menu</a>
+
+  <h1>UI Design</h1>
+
+  <!-- UI Design Thumbnail -->
+  <div class="section-wrapper" data-aos="fade-up" data-aos-delay="100">
+    <div class="section-title">📱 Mobile UI Designs</div>
+    <div class="thumbnail">
+      <a href="https://ibb.co.com/8g9BXGSJ"><img src="https://i.ibb.co.com/r2Htvq1g/Teb-Work-1.png" alt="Teb-Work-1" border="0"></a>
+    </div>
+  </div>
+
+  <!-- Call to Action Button -->
+  <footer>
+    <a href="index.html" class="back-button">Back to Main Menu</a>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: false
+    });
+  </script>
+</body>
+</html>
